@@ -40,6 +40,11 @@ export default {
         await this.nightmareInstances[id].viewport(width, height);
     },
 
+    // Sets the useragent used by electron.
+    async useragent (id, useragent) {
+        await this.nightmareInstances[id].useragent(useragent);
+    },
+
     // take screenshot of given page in browser
     async takeScreenshot (id, screenshotPath) {
         await this.nightmareInstances[id].screenshot(screenshotPath);
