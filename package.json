@@ -1,5 +1,5 @@
 {
-  "name": "@lojaskd/testcafe-browser-provider-nightmare",
+  "name": "testcafe-browser-provider-nightmare",
   "version": "0.0.5",
   "description": "nightmare TestCafe browser provider plugin.",
   "repository": "https://github.com/ryx/testcafe-browser-provider-nightmare",
