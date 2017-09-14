@@ -23,6 +23,10 @@ export default {
 
         this.nightmareInstances[id] = Nightmare(conf);
 
+        // Sets the useragent used by electron.
+        // Mobile Chrome for Android - https://developer.chrome.com/multidevice/user-agent
+        this.nightmareInstances[id].useragent('Mozilla/5.0 (Linux; <Android Version>; <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>');
+
         await this.nightmareInstances[id].goto(pageUrl);
     },
 
@@ -38,11 +42,6 @@ export default {
     // resize browser window to given size
     async resizeWindow (id, width, height) {
         await this.nightmareInstances[id].viewport(width, height);
-    },
-
-    // Sets the useragent used by electron.
-    async useragent (id, useragent) {
-        await this.nightmareInstances[id].useragent(useragent);
     },
 
     // take screenshot of given page in browser
